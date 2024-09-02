@@ -1,0 +1,65 @@
+/* styles.css */
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 20px;
+}
+
+.main-container {
+    display: flex;
+    /* Use flexbox to create a two-column layout */
+    max-width: 1300px;
+    margin: auto;
+    gap: 20px;
+    /* Adds spacing between the two containers */
+}
+
+.left-container {
+    flex: 3;
+    /* Takes 3 parts of the flex container */
+    background: #ffffff;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.right-container {
+    flex: 1;
+    /* Takes 1 part of the flex container */
+    background: #f0f0f0;
+    /* Light grey background for differentiation */
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+h1 {
+    text-align: center;
+    color: #333333;
+    margin-bottom: 20px;
+}
+
+h2 {
+    color: #0056b3;
+    margin-top: 20px;
+}
+
+p {
+    color: #333333;
+    margin-bottom: 15px;
+}
+
+.responsive-image {
+    width: 100%;
+    height: auto;
+    margin: 15px 0;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+ul {
+    list-style-type: disc;
+    padding-left: 20px;
+}

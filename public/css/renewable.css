@@ -1,0 +1,90 @@
+/* General styling for the body and container */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+}
+
+.container {
+    display: flex; /* Use flexbox to create a side-by-side layout */
+    max-width: 1200px; /* Set a maximum width for the container */
+    margin: 0 auto; /* Center the container on the page */
+    padding: 20px;
+    background-color: #fff; /* Background color for the container */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a subtle shadow around the container */
+    gap: 20px; /* Space between the two sides */
+}
+
+/* Styling for the left side (narrow content side) */
+.content {
+    flex: 1; /* Allows the content to take up less space than the image side */
+    padding: 20px;
+    background-color: #fafafa; /* Slight background color to distinguish */
+    border-radius: 8px; /* Rounded corners for the content box */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for content */
+    overflow-y: auto; /* Enable scrolling if content overflows */
+}
+
+/* Styling for the right side (wider image side) */
+.image {
+    flex: 0.6; /* Allows the image side to be wider */
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center the image and text */
+    justify-content: flex-start; /* Align items to the top */
+    background-color: #e0e0e0; /* Background color for the image section */
+    border-radius: 8px; /* Rounded corners for the image box */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for image section */
+}
+
+/* Styling for images */
+.image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px; /* Rounded corners for images */
+    margin-bottom: 20px; /* Space below the image */
+}
+
+/* Heading styles */
+h2 {
+    margin-top: 0;
+    color: #333;
+}
+
+h3 {
+    color: #333;
+}
+
+/* Paragraph styles */
+p {
+    color: #555;
+    line-height: 1.6;
+}
+
+/* List styles */
+ul {
+    padding-left: 20px;
+    color: #555;
+}
+
+li {
+    margin-bottom: 10px;
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 768px) {
+    .container {
+        flex-direction: column; /* Stack items vertically on small screens */
+        padding: 10px;
+    }
+
+    .content,
+    .image {
+        flex: 1; /* Make both sides take equal space on small screens */
+        width: 100%; /* Full width for both sections */
+        box-shadow: none; /* Remove box shadows for simplicity */
+        margin-bottom: 20px; /* Space between stacked sections */
+    }
+}

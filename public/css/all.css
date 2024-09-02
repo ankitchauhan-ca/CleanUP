@@ -1,0 +1,276 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #e6f0e6;
+    color: #333;
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+    animation: fadeIn 2s ease-in-out;
+}
+
+header {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('thrs.jpg');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    padding: 2px 0px;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.7);
+    border-bottom: 5px solid #fff;
+    animation: slideInDown 1.5s ease-out;
+}
+
+/* Main heading style */
+header h1 {
+    font-size: 2.8em;
+    margin-bottom: 20px;
+    letter-spacing: 1px;
+}
+
+/* Header paragraph style */
+header p {
+    font-size: 1.2em;
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.8;
+}
+
+/* Section headers */
+.principles,
+.importances,
+.benefits,
+.how-to-start,
+.resources {
+    margin-top: 60px;
+    animation: fadeIn 2s ease-in-out;
+    /* Fade-in animation for sections */
+}
+
+/* Section titles */
+.principles h2,
+.importances h2,
+.benefits h2,
+.how-to-start h2,
+.resources h2 {
+    font-size: 2em;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+    color: #2a7ae4;
+}
+
+/* Card styles for principles section */
+.principle-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
+    animation: fadeInUp 2s ease-out;
+    /* Fade-in and move up animation for cards */
+}
+
+/* Individual card styles */
+.card {
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 10px;
+    padding: 25px;
+    max-width: 280px;
+    flex: 1;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+    animation: fadeInUp 1.5s ease-out;
+    /* Fade-in and move up animation for each card */
+}
+
+/* Hover effect for cards */
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Image within the cards */
+.card img {
+    max-width: 80px;
+    margin-bottom: 15px;
+    animation: bounce 2s infinite;
+    /* Bounce animation for icons */
+}
+
+/* Card heading */
+.card h3 {
+    font-size: 1.5em;
+    margin-top: 15px;
+    color: #3b3b3b;
+}
+
+/* Card text */
+.card p {
+    font-size: 1em;
+    line-height: 1.6;
+    color: #555;
+}
+
+/* List styles for benefits and resources */
+.importances ul,
+.benefits ul,
+.resources ul,
+.how-to-start ol {
+    text-align: left;
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 0 20px;
+    list-style-position: inside;
+    color: #444;
+}
+
+/* List item styles */
+.importances ul li,
+.benefits ul li,
+.resources ul li,
+.how-to-start ol li {
+    font-size: 1.1em;
+    line-height: 1.8;
+    margin-bottom: 8px;
+    animation: fadeIn 1s ease-out;
+    /* Fade-in animation for list items */
+}
+
+h4 {
+    color: #00698f;
+    margin-bottom: 10px;
+    font-size: 24px;
+    padding-right: 715px;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+li {
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+}
+
+li:last-child {
+    border-bottom: none;
+}
+
+ul li::before {
+    content: "\2022";
+    font-weight: bold;
+    font-size: 1.2em;
+    padding-right: 10px;
+    color: #00698f;
+}
+
+/* Links within the resources section */
+.resources ul li a {
+    color: #2a7ae4;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s, text-decoration 0.3s;
+}
+
+/* Hover effect for links */
+.resources ul li a:hover {
+    color: #1b5dbf;
+    text-decoration: underline;
+}
+
+/* Media queries for responsiveness */
+@media (max-width: 768px) {
+    .principle-cards {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .card {
+        max-width: 100%;
+    }
+
+    header h1 {
+        font-size: 2.2em;
+    }
+
+    header p {
+        font-size: 1em;
+    }
+
+    .principles h2,
+    .importances h2,
+    .benefits h2,
+    .how-to-start h2,
+    .resources h2 {
+        font-size: 1.8em;
+    }
+}
+
+/* Keyframes for animations */
+
+/* Fade-in animation */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+/* Slide in down animation for header */
+@keyframes slideInDown {
+    0% {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Fade in and move up animation */
+@keyframes fadeInUp {
+    0% {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Bounce animation for icons */
+@keyframes bounce {
+
+    0%,
+    20%,
+    50%,
+    80%,
+    100% {
+        transform: translateY(0);
+    }
+
+    40% {
+        transform: translateY(-15px);
+    }
+
+    60% {
+        transform: translateY(-10px);
+    }
+}

@@ -1,0 +1,169 @@
+body {
+    font-family: TT Commons, system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, sans-serif;
+    font-size: 19px;
+    font-weight: 400;
+    line-height: 24px;
+    min-height: 100vh;
+    overflow-x: hidden;
+    position: relative;
+}
+
+nav {
+    unicode-bidi: isolate;
+}
+
+.nav__bar {
+    align-items: center;
+    background-color: #fff;
+    display: -webkit-box;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    padding: 0 32px;
+    position: relative;
+    transition: transform .25s ease-in-out;
+    will-change: transform;
+    z-index: 101;
+}
+
+@media (max-width: 767px) {
+    .nav__bar {
+        padding: 0 20px;
+    }
+}
+
+.nav__bar:after {
+    background: #e7eaf4;
+    content: "";
+    height: 1px;
+    left: 0;
+    opacity: 0;
+    pointer-events: none;
+    position: absolute;
+    top: 100%;
+    transition: opacity .25s;
+    width: 100%;
+    will-change: opacity;
+}
+
+
+
+.nav__bar-logo-rio {
+    background-position: 0 50%;
+    background-repeat: no-repeat;
+    background-size: contain;
+    display: inline-block;
+    height: 35.9px;
+    width: 125px;
+}
+
+div {
+    display: block;
+    unicode-bidi: isolate;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+    touch-action: manipulation;
+    background-color: initial;
+}
+
+.nav__bar-menu {
+    align-items: center;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.nav__bar-link {
+    text-decoration: none;
+    align-items: center;
+    color: #1e2532;
+    display: flex;
+    height: 80px;
+    padding: 0 16px;
+    transition: color .15s;
+}
+
+.nav__bar-link.active {
+    color: #828ba2;
+}
+
+.nav__bar-link:hover {
+    color: #10529b;
+}
+
+.nav__bar-link:last-child {
+    margin-right: 0;
+}
+
+.nav__bar-separator {
+    background-color: #d9deeb;
+    height: 16px;
+    margin-left: 24px;
+    margin-right: 40px;
+    width: 1px;
+}
+
+.nav__bar-auth {
+    align-items: center;
+    display: flex;
+    flex-flow: row nowrap;
+}
+
+.button {
+    text-decoration: none;
+    appearance: none;
+    border-radius: 4px;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 22px;
+    outline: none;
+    text-align: center;
+    transition: background-color .1s, color .1s, box-shadow .1s;
+    user-select: none;
+}
+
+.button.button--ghost {
+    background-color: initial;
+    border: 1px solid #1a91f0;
+    color: #1a91f0;
+    padding: 13px 23px;
+}
+
+/* dropdown */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #ffffff;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    border-radius: 4px;
+}
+
+.dropdown-content a {
+    color: #1e2532;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    font-size: 16px;
+    line-height: 20px;
+}
+
+/* Show dropdown on hover */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Change color on hover */
+.dropdown-content a:hover {
+    background-color: #f1f1f1;
+    color: #10529b;
+}
